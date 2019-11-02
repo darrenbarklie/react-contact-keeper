@@ -18,7 +18,7 @@ const Register = props => {
       setAlert(error, 'danger')
       clearErrors()
     }
-    // esline-disable-next-line
+    // eslint-disable-next-line
   }, [error, isAuthenticated, props.history])
 
   const [user, setUser] = useState({
@@ -60,6 +60,7 @@ const Register = props => {
             name="name"
             value={name}
             onChange={onChange}
+            autoComplete="name"
             required
           />
         </div>
@@ -70,6 +71,7 @@ const Register = props => {
             name="email"
             value={email}
             onChange={onChange}
+            autoComplete="email"
             required
           />
         </div>
@@ -80,6 +82,7 @@ const Register = props => {
             name="password"
             value={password}
             onChange={onChange}
+            autoComplete="new-password"
             required
             minLength="6"
           />
@@ -91,6 +94,7 @@ const Register = props => {
             name="password2"
             value={password2}
             onChange={onChange}
+            autoComplete="new-password"
             required
             minLength="6"
           />
